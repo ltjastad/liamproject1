@@ -21,7 +21,7 @@ func _handle_input(delta):
 	if Input.is_action_pressed("ui_left"): move_dir.x -= 1
 	if Input.is_action_pressed("ui_right"): move_dir.x += 1
 	if Input.is_action_pressed("ui_up"): move_dir.y -= 1
-	if Input.is_action_pressed("ui_down"): move_dir.y += 1
+	#if Input.is_action_pressed("ui_down"): move_dir.y += 1
 	
 	# animate
 	if move_dir != Vector2(0,0): $sprite/AnimationPlayer.play("walk")

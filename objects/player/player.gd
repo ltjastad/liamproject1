@@ -2,8 +2,8 @@ extends KinematicBody2D
 
 export(int) var movement_speed = 3000 # left and right movement speed
 export(int) var max_x_velocity = 3000 # maximum left and right velocity (speed)
-export(int) var drag_force = 0.2
 export(int) var gravity = 150 # gravity pushing down on player
+export(float) var slide_force = 50
 export(int) var max_fall_speed = 5000 # max speed when falling
 export(int) var jump_force = 16000 # upwards jumping force
 
@@ -47,7 +47,7 @@ func _handle_input(delta):
 	
 	# if player is not moving left or right, add drag to movement
 	if move_dir.x == 0:
-		_vel.x = _vel.x * drag_force * delta
+		_vel.x = _vel.x * slide_force * delta
 	
 	move_and_slide(_vel*delta, Vector2(0,-1))
 	

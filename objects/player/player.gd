@@ -7,6 +7,7 @@ export(float) var slide_force = 50
 export(int) var max_fall_speed = 5000 # max speed when falling
 export(int) var jump_force = 16000 # upwards jumping force
 
+onready var _collision_shape_offset = $CollisionShape2D.position
 
 
 var _vel = Vector2(0,0)
@@ -29,8 +30,12 @@ func _handle_input(delta):
 	# animate
 	if move_dir != Vector2(0,0): $sprite/AnimationPlayer.play("walk")
 	else: $sprite/AnimationPlayer.play("idle")
-	if move_dir.x < 0: $sprite.flip_h = false
-	elif move_dir.x > 0: $sprite.flip_h = true
+	if move_dir.x < 0 and $sprite.flip_h:
+		$sprite.flip_h = false
+		$CollisionShape2D.position = _collision_shape_offset
+	elif move_dir.x > 0 and !$sprite.flip_h:
+		$sprite.flip_h = true
+		$CollisionShape2D.position = Vector2(-_collision_shape_offset.x, _collision_shape_offset.y)
 	
 	# add to velocity
 	_vel.x += move_dir.x * movement_speed

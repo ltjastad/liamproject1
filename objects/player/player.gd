@@ -2,9 +2,9 @@ extends KinematicBody2D
 
 export(int) var movement_speed = 3000 # left and right movement speed
 export(int) var max_x_velocity = 3000 # maximum left and right velocity (speed)
-export(int) var gravity = 150 # gravity pushing down on player
+export(int) var gravity = 200 # gravity pushing down on player
 export(float) var slide_force = 50
-export(int) var max_fall_speed = 5000 # max speed when falling
+export(int) var max_fall_speed = 7000 # max speed when falling
 export(int) var jump_force = 16000 # upwards jumping force
 
 onready var _collision_shape_offset = $CollisionShape2D.position

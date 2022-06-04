@@ -57,7 +57,6 @@ func _handle_input(delta):
 	for b in bodies:
 		if b.get_parent().has_method("is_climbable"):
 			climbing = true
-			print("climbing")
 			break
 	
 	if climbing:

@@ -62,11 +62,12 @@ func _handle_input(delta):
 	if climbing:
 		if Input.is_action_pressed("ui_up"): move_dir.y -= 1
 		if Input.is_action_pressed("ui_down"): move_dir.y += 1
+		if Input.is_action_pressed("ui_jump"): move_dir.y -= 1
 	
 	# add to velocity
 	_vel.x += move_dir.x * movement_speed
 	
-	if Input.is_action_just_pressed("ui_jump"):
+	if Input.is_action_just_pressed("ui_jump") and !climbing:
 		if is_on_floor():
 			_vel.y -= jump_force
 	

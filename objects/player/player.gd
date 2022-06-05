@@ -17,7 +17,6 @@ func _ready():
 	var areashape = $CollisionShape2D.duplicate()
 	areashape.name = "areashape"
 	$Area2D.add_child(areashape)
-	add_collision_exception_with($Area2D)
 	
 
 func _physics_process(delta):
@@ -63,6 +62,10 @@ func _handle_input(delta):
 		if Input.is_action_pressed("ui_up"): move_dir.y -= 1
 		if Input.is_action_pressed("ui_down"): move_dir.y += 1
 		if Input.is_action_pressed("ui_jump"): move_dir.y -= 1
+	
+	# clamp movedir
+	move_dir.x = clamp(move_dir.x, -1, 1)
+	move_dir.y = clamp(move_dir.y, -1, 1)
 	
 	# add to velocity
 	_vel.x += move_dir.x * movement_speed

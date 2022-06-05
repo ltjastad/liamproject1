@@ -21,6 +21,15 @@ position = Vector2( 187, 143 )
 flip_horizontally = true
 flip_vertically = true
 
+[node name="Ladder5" parent="decorations" instance=ExtResource( 5 )]
+position = Vector2( 226, 254 )
+flip_horizontally = true
+flip_vertically = true
+
+[node name="Ladder6" parent="decorations" instance=ExtResource( 5 )]
+position = Vector2( 226, 232 )
+flip_vertically = true
+
 [node name="Ladder2" parent="decorations" instance=ExtResource( 5 )]
 position = Vector2( 187, 121 )
 
@@ -33,6 +42,11 @@ position = Vector2( 187, 77 )
 rotation = -5.07036e-06
 flip_vertically = true
 
+[node name="Ladder7" parent="decorations" instance=ExtResource( 5 )]
+position = Vector2( 187, 55 )
+rotation = -5.07036e-06
+flip_horizontally = true
+
 [node name="player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 139, 53 )
 movement_speed = 4000
@@ -40,6 +54,7 @@ max_x_velocity = 5000
 jump_force = 17000
 
 [node name="camera" type="Camera2D" parent="."]
+position = Vector2( 137, 53 )
 current = true
 zoom = Vector2( 0.3, 0.3 )
 
@@ -62,3 +77,5 @@ cell_size = Vector2( 22, 22 )
 show_collision = true
 format = 1
 tile_data = PoolIntArray( 4, 5, 0, 6, 5, 0, 7, 5, 0, 9, 5, 0, 65540, 5, 0, 65541, 5, 0, 65542, 5, 0, 65543, 5, 0, 65544, 5, 0, 65545, 5, 0, 131076, 5, 0, 131079, 3, 0, 131081, 5, 0, 196612, 5, 0, 196613, 5, 0, 196614, 5, 0, 196615, 5, 0, 196617, 5, 0, 262148, 5, 0, 262153, 0, 0, 327684, 5, 0, 327689, 0, 0, 393220, 5, 0, 393225, 0, 0, 458756, 5, 0, 458760, 0, 0, 458761, 0, 0, 524292, 5, 0, 524293, 5, 0, 524297, 0, 0, 589828, 5, 0, 589829, -1073741819, 0, 589830, 5, 0, 589833, 3, 0, 655364, 5, 0, 655365, 5, 0, 655366, 5, 0, 655367, 5, 0, 655368, 5, 0, 655369, 5, 0, 720900, 5, 0, 720901, 5, 0, 720902, 5, 0, 720903, 5, 0, 720904, 5, 0, 720905, 5, 0, 786436, 5, 0, 786437, 5, 0, 786438, 5, 0, 786439, 5, 0, 786440, 5, 0, 786441, 5, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 786449, 2, 0, 786450, 2, 0, 786451, 2, 0, 786452, 2, 0, 786453, 2, 0, 786454, 2, 0, 786455, 2, 0, 786456, 2, 0, 786457, 2, 0 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

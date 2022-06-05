@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ui/dialogue_box/dialogue_box.gd" type="Script" id=1]
+
+[node name="dialogue_box" type="PanelContainer"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -85.0
+margin_top = -46.0
+margin_right = 85.0
+margin_bottom = -239.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 163.0
+margin_bottom = 21.0
+grow_horizontal = 0
+grow_vertical = 0

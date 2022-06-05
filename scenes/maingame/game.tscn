@@ -139,6 +139,7 @@ message = "The bathroom is closed."
 position = Vector2( -231, 585 )
 scale = Vector2( 1.486, 4.75884 )
 message = "Is this the bathroom?"
+trigger_once = true
 
 [node name="message_trigger5" parent="messages" instance=ExtResource( 6 )]
 position = Vector2( -148, 604 )
